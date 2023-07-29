@@ -3,7 +3,15 @@ import gymateIMG from "../assets/images/projects/gymate-demo.netlify.app.png";
 import mammonousIMG from "../assets/images/projects/mammonous-furniture.netlify.app.png";
 import songuessrIMG from "../assets/images/projects/songuessr.netlify.app.png";
 
-export const projects = [
+export type IProject = {
+  name: string;
+  desc: string;
+  img: string;
+  github: string;
+  live: string;
+};
+
+export const projects: IProject[] = [
   {
     name: "FPLTools",
     desc: "FPLTools is web app for Fantasy Premier League (FPL) geeks. It offers features to analyze users team and help them with FPL gameplay. The main feature is transfer planner, in which FPLTools user can simulate making his own transfers. In this project I'm using MERN stack with React + Typescript. I'm also using redux toolkit too cenralize app state. Project is currently in progress and that's what I'm working on now. I encourage you to visit GITHUB and LIVE demo.",

@@ -11,6 +11,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype"),
+    url(./assets/fonts/Poppins-Bold.ttf) format("truetype");
+}
+
 :root {
   --primary-color: #222a36;
   --primary-color-light: #303c4d;
@@ -33,6 +39,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: "Poppins";
 }
 
 /* Sections
@@ -99,15 +106,13 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: underline;
 }
 
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-a {
-  text-decoration: underline;
-}
 
 abbr[title] {
   border-bottom: none; /* 1 */
