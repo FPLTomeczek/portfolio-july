@@ -13,9 +13,9 @@ const ContactContainer = () => {
       <div className="flex flex-col gap-6 mt-4">
         {contacts.map((contact) => {
           return (
-            <div className="flex py-6 px-4 border border-secondary-color rounded-2xl items-center gap-4">
+            <div className="flex py-6 px-4 border border-secondary-color rounded-2xl items-center gap-4 transition duration-500 hover:bg-secondary-color cursor-pointer contact">
               <i
-                className={`${contact.iconClassName} text-5xl text-grey-400 w-12`}
+                className={`${contact.iconClassName} text-5xl text-grey-400 w-12 contact__icon`}
               />
               <p>{contact.value}</p>
             </div>

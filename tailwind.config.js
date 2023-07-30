@@ -15,7 +15,14 @@ export default {
         "accent-color-dark": "var(--accent-color-dark)",
         "grey-200": "var(--grey-200)",
         "grey-400": "var(--grey-400)",
+        "gradient-hover-color-start": "var(--gradient-hover-color-start)",
+        "gradient-hover-color-end": "var(--gradient-hover-color-end)",
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ["hover"], // add here more properties if you need
     },
   },
   plugins: [],

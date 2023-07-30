@@ -7,7 +7,7 @@ import Navbar from "./layout/components/Navbar";
 
 function App() {
   return (
-    <div className="p-4">
+    <div className="p-4 max-w-7xl my-0 mx-auto">
       <Navbar />
       <HeaderCard />
       <Skills />

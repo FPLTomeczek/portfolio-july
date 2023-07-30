@@ -43,12 +43,16 @@ const Project = ({ name, desc, img, github, live }: IProject) => {
       }`}
     >
       <h2 className="text-2xl font-bold">{name}</h2>
-      <div className="max-w-[260px] max-h-[300px] overflow-hidden rounded-lg mt-2">
-        <img src={img} alt="project" className="w-100 object-cover" />
+      <div className="w-[280px] h-[300px] overflow-hidden rounded-lg mt-2 relative">
+        <img
+          src={img}
+          alt="project"
+          className={`w-100 object-cover absolute left-0 bottom-[-1395px] hover:bottom-0 ${name}-img `}
+        />
       </div>
       <ProjectIcons githubLink={github} liveLink={live} />
       <p
-        className="text-center mt-4 max-w-[260px] leading-6"
+        className="text-center mt-4 max-w-[280px] leading-6"
         dangerouslySetInnerHTML={{ __html: formattedDesc }}
       ></p>
     </div>
