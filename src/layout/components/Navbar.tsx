@@ -1,3 +1,11 @@
+const navbarList = [
+  { id: "About-heading", name: "About" },
+  { id: "Skills-heading", name: "Skills" },
+  { id: "Experience-heading", name: "Experience" },
+  { id: "Projects-heading", name: "Projects" },
+  { id: "Contact-heading", name: "Contact" },
+];
+
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center">
@@ -8,11 +16,13 @@ const Navbar = () => {
 
       <i className="fa-solid fa-bars text-2xl md:!hidden"></i>
       <ul className="hidden md:flex gap-8">
-        <li>About</li>
-        <li>Skills</li>
-        <li>Experience</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        {navbarList.map((item) => (
+          <a href={`#${item.id}`} className="no-underline">
+            <li className="hover:text-secondary-color cursor-pointer">
+              {item.name}
+            </li>
+          </a>
+        ))}
       </ul>
     </nav>
   );

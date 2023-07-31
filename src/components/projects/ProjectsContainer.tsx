@@ -7,9 +7,11 @@ const ProjectsContainer = () => {
   return (
     <section className="mt-8">
       <Hero text="Projects" />
-      {projects.map((project) => (
-        <Project {...project} key={project.name} />
-      ))}
+      <div className="flex flex-col md:flex-row flex-wrap justify-center mt-4 gap-4">
+        {projects.map((project) => (
+          <Project {...project} key={project.name} />
+        ))}
+      </div>
     </section>
   );
 };
@@ -37,11 +39,7 @@ const Project = ({ name, desc, img, github, live }: IProject) => {
     .replace("password", "<b>password</b>");
 
   return (
-    <div
-      className={`bg-primary-color-dark pt-2 px-4 pb-8 mb-8 rounded-xl flex flex-col items-center ${
-        name === "FPLTools" ? "mt-4" : ""
-      }`}
-    >
+    <div className="bg-primary-color-dark pt-2 px-4 pb-8 mb-8 rounded-xl flex flex-col items-center">
       <h2 className="text-2xl font-bold">{name}</h2>
       <div className="w-[280px] h-[300px] overflow-hidden rounded-lg mt-2 relative">
         <img

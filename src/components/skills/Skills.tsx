@@ -9,12 +9,16 @@ const skillsList = [
   "Node.js",
   "Java",
   "English",
+  "Redux",
+  "Vitest",
+  "RTL",
+  "React Query",
 ];
 const Skills = () => {
   return (
     <section className="mt-8">
       <Hero text="Skills" />
-      <div className="grid grid-cols-2 gap-4 bg-primary-color-dark rounded-lg py-6 px-12 mt-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-12 mt-4 md:px-0">
         {skillsList.map((skill) => {
           return (
             <span
