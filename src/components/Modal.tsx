@@ -29,16 +29,18 @@ const Modal = ({
       </div>
       <ul className="flex flex-col gap-8 justify-center items-center h-4/6">
         {navbarList.map((item) => (
-          <a
-            href={`#${item.id}`}
+          <li
+            className="hover:text-secondary-color cursor-pointer text-3xl"
             key={item.id}
-            className="no-underline"
-            onClick={() => handleOpeningModal(false)}
           >
-            <li className="hover:text-secondary-color cursor-pointer text-3xl">
+            <a
+              href={`#${item.id}`}
+              className="no-underline"
+              onClick={() => handleOpeningModal(false)}
+            >
               {item.name}
-            </li>
-          </a>
+            </a>
+          </li>
         ))}
       </ul>
     </motion.div>

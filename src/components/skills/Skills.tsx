@@ -1,4 +1,5 @@
 import Hero from "../Hero";
+import Perks from "./Perks";
 
 const skillsList = [
   "HTML",
@@ -30,6 +31,7 @@ const Skills = () => {
           );
         })}
       </div>
+      <Perks />
     </section>
   );
 };
