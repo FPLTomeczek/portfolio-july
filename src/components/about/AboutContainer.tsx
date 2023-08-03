@@ -2,8 +2,8 @@ import Hero from "../Hero";
 import ImageComponent from "./ImageComponent";
 import About from "./About";
 import Hobbies from "./Hobbies";
-import codingImg from "../../assets/images/animated/coding-image.png";
-import teamworkImg from "../../assets/images/animated/teamwork-image.png";
+import codingImg from "../../assets/images/animated/coding-image.webp";
+import teamworkImg from "../../assets/images/animated/teamwork-image.webp";
 
 const perks = [
   {

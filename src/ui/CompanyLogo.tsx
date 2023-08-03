@@ -1,5 +1,5 @@
-import pk from "../assets/images/logos/pk.png";
-import sollers from "../assets/images/logos/sollers.jpg";
+import pk from "../assets/images/logos/pk.webp";
+import sollers from "../assets/images/logos/sollers.webp";
 import { Company } from "../enums/companies";
 
 function getImage(company: string) {

@@ -1,7 +1,7 @@
-import fpltoolsIMG from "../assets/images/projects/fpltools.onrender.com.png";
-import gymateIMG from "../assets/images/projects/gymate-demo.netlify.app.png";
-import mammonousIMG from "../assets/images/projects/mammonous-furniture.netlify.app.png";
-import songuessrIMG from "../assets/images/projects/songuessr.netlify.app.png";
+import fpltoolsIMG from "../assets/images/projects/fpltools.onrender.com.webp";
+import gymateIMG from "../assets/images/projects/gymate-demo.netlify.app.webp";
+import mammonousIMG from "../assets/images/projects/mammonous-furniture.netlify.app.webp";
+import songuessrIMG from "../assets/images/projects/songuessr.netlify.app.webp";
 
 export type IProject = {
   name: string;

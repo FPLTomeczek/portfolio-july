@@ -18,11 +18,14 @@ const Navbar = ({
       ></i>
       <ul className="hidden md:flex gap-8">
         {navbarList.map((item) => (
-          <a href={`#${item.id}`} className="no-underline" key={item.id}>
-            <li className="hover:text-secondary-color cursor-pointer">
+          <li
+            className="hover:text-secondary-color cursor-pointer"
+            key={item.id}
+          >
+            <a href={`#${item.id}`} className="no-underline">
               {item.name}
-            </li>
-          </a>
+            </a>
+          </li>
         ))}
       </ul>
     </nav>

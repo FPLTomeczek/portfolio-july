@@ -1,4 +1,4 @@
-import avatar from "../assets/images/avatar/avatar.jpg";
+import avatar from "../assets/images/avatar/avatar.webp";
 import CircleDiligence from "../ui/Circles/CircleDiligence";
 import CirclePassion from "../ui/Circles/CirclePassion";
 import CircleTeamPlayer from "../ui/Circles/CircleTeamwork";
@@ -12,8 +12,10 @@ const HeaderCard = () => {
         className="w-28 h-28 rounded-full object-cover"
       />
       <div>
-        <h4>Tomek</h4>
-        <span className="text-xs text-secondary-color">Frontend Developer</span>
+        <h1 className="text-lg m-0">Tomek</h1>
+        <span className="text-xs text-secondary-color-light font-bold">
+          Frontend Developer
+        </span>
       </div>
       <CirclePassion />
       <CircleDiligence />
