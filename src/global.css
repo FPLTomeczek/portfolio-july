@@ -386,15 +386,70 @@ template {
   display: none;
 }
 
+.backface-visible {
+  backface-visibility: visible;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
 .triangle {
   position: absolute;
   top: 25px;
-  left: calc(var(--triangle-size) * -1);
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
   border-bottom: 16px solid transparent;
+}
+.triangle-left {
   border-right: var(--triangle-size) solid var(--primary-color-dark);
+  left: calc(var(--triangle-size) * -1);
+}
+.triangle-right {
+  border-left: var(--triangle-size) solid var(--primary-color-dark);
+  right: calc(var(--triangle-size) * -1);
+}
+@media screen and (max-width: 767px) {
+  .triangle-right {
+    border-right: var(--triangle-size) solid var(--primary-color-dark);
+    left: calc(var(--triangle-size) * -1);
+    border-left: none;
+  }
+}
+
+.brand-logo {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  top: 25px;
+  z-index: 10;
+}
+.brand-logo-right {
+  right: -60px;
+}
+.brand-logo-left {
+  left: -60px;
+}
+@media screen and (max-width: 767px) {
+  .brand-logo-right {
+    right: auto;
+    left: -60px;
+  }
+}
+
+.line-axis {
+  position: absolute;
+  left: 18px;
+  width: 4px;
+  background-color: var(--secondary-color);
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .line-axis {
+    left: calc(50% - 2px);
+  }
 }
 
 .hero::before {
@@ -426,4 +481,24 @@ template {
 .Mammonous {
   bottom: -2281px;
   transition: bottom 8s;
+}
+
+.linear-gradient-skills {
+  background: linear-gradient(
+      to right,
+      var(--secondary-color) 50%,
+      transparent 50%
+    ),
+    linear-gradient(to right, var(--secondary-color), var(--accent-color));
+  background-size: 200% 100%, 100% 100%;
+  background-position: right bottom, left bottom;
+  transition: all 0.5s ease;
+}
+
+.linear-gradient-skills:hover {
+  background-position: left bottom, left bottom;
+}
+
+.animate-image {
+  transition: transform 0.5s ease-out;
 }

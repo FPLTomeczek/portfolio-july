@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import Hero from "../Hero";
 
 const contacts = [
@@ -23,19 +25,31 @@ const ContactContainer = () => {
     <>
       <Hero text="Contact" />
       <div className="flex flex-col md:flex-row gap-6 mt-4">
-        {contacts.map((contact) => {
+        {contacts.map((contact, index) => {
           const { value, iconClassName, ref } = contact;
           return (
-            <a
-              href={ref}
-              className="flex py-6 px-4 border border-secondary-color rounded-2xl items-center gap-4 transition duration-500 hover:bg-secondary-color cursor-pointer contact w-full no-underline"
-              target={`${ref.includes("linkedin") ? "_blank" : ""}`}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                opacity: { duration: 2, delay: index, ease: "linear" },
+                scale: { duration: 0.5, delay: index, ease: "linear" },
+              }}
+              className=" py-6 px-4 border border-secondary-color rounded-2xl transition duration-500 hover:bg-secondary-color cursor-pointer contact w-full"
+              key={contact.value}
             >
-              <i
-                className={`${iconClassName} text-5xl text-grey-400 w-12 contact__icon`}
-              />
-              <p>{value}</p>
-            </a>
+              <a
+                href={ref}
+                className="flex items-center gap-4 no-underline"
+                target={`${ref.includes("linkedin") ? "_blank" : ""}`}
+              >
+                <i
+                  className={`${iconClassName} text-5xl text-grey-400 w-12 contact__icon`}
+                />
+                <p>{value}</p>
+              </a>
+            </motion.div>
           );
         })}
       </div>

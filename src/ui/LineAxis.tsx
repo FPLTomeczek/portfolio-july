@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 const LineAxis = () => {
   return (
-    <div className="h-full left-[18px]  w-1 bg-secondary-color absolute"></div>
+    <motion.div
+      whileInView={{ height: "100%" }}
+      initial={{ height: "0" }}
+      transition={{ duration: 8 }}
+      viewport={{ once: true }}
+      className="line-axis"
+    ></motion.div>
   );
 };
 

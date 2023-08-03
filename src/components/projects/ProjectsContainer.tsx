@@ -5,7 +5,7 @@ import { IProject } from "../../data/projects";
 
 const ProjectsContainer = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-8 relative">
       <Hero text="Projects" />
       <div className="flex flex-col md:flex-row flex-wrap justify-center mt-4 gap-4">
         {projects.map((project) => (

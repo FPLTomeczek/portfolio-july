@@ -1,4 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin";
+
+const rotateY = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".rotate-y-0": {
+      transform: "rotateY(0deg)",
+    },
+    ".rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+    ".rotate-y-minus-180deg": {
+      transform: "rotateY(-180deg)",
+    },
+  });
+});
+
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
@@ -25,5 +41,5 @@ export default {
       backgroundColor: ["hover"], // add here more properties if you need
     },
   },
-  plugins: [],
+  plugins: [rotateY],
 };

@@ -2,26 +2,33 @@ import pk from "../assets/images/logos/pk.png";
 import sollers from "../assets/images/logos/sollers.jpg";
 import { Company } from "../enums/companies";
 
-export const CompanyLogo = ({ company }: { company: Company | string }) => {
-  if (company === Company.SOLLERS) {
-    return (
-      <img
-        className="w-8 h-8 rounded-full absolute top-[25px] left-[-60px] z-10"
-        src={sollers}
-        alt="sollers-consulting"
-      />
-    );
+function getImage(company: string) {
+  switch (company) {
+    case Company.SOLLERS:
+      return sollers;
+    case Company.PK:
+      return pk;
+    default:
+      return "s";
   }
+}
 
-  if (company === Company.PK) {
-    return (
-      <img
-        className="w-8 h-8 rounded-full absolute top-[25px] left-[-60px] z-10"
-        src={pk}
-        alt="politechnika-krakowska"
-      />
-    );
-  }
+export const CompanyLogo = ({
+  company,
+  direction,
+}: {
+  company: Company | string;
+  direction: string;
+}) => {
+  const img = getImage(company);
+
+  return (
+    <img
+      className={`brand-logo brand-logo-${direction}`}
+      src={img}
+      alt={company}
+    />
+  );
 };
 
 export default CompanyLogo;

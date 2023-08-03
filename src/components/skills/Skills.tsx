@@ -22,7 +22,7 @@ const Skills = () => {
         {skillsList.map((skill) => {
           return (
             <span
-              className="bg-gradient-to-r from-secondary-color to-accent-color text-center rounded-lg py-2 text-xs"
+              className="text-center rounded-lg py-2 text-xs linear-gradient-skills"
               key={skill}
             >
               {skill}
