@@ -16,7 +16,7 @@ const ProjectsContainer = () => {
   );
 };
 
-const Project = ({ name, desc, img, github, live }: IProject) => {
+const Project = ({ name, desc, img, github, live, technology }: IProject) => {
   const githubLinkFPLTools = projects.find(
     (project) => project.name === "FPLTools"
   )?.github;
@@ -48,7 +48,11 @@ const Project = ({ name, desc, img, github, live }: IProject) => {
           className={`w-100 object-cover absolute left-0 bottom-[-1395px] hover:bottom-0 ${name}-img `}
         />
       </div>
-      <ProjectIcons githubLink={github} liveLink={live} />
+      <ProjectIcons
+        githubLink={github}
+        liveLink={live}
+        technology={technology}
+      />
       <p
         className="text-center mt-4 max-w-[280px] leading-6"
         dangerouslySetInnerHTML={{ __html: formattedDesc }}

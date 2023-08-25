@@ -2,6 +2,7 @@ import fpltoolsIMG from "../assets/images/projects/fpltools.onrender.com.webp";
 import gymateIMG from "../assets/images/projects/gymate-demo.netlify.app.webp";
 import mammonousIMG from "../assets/images/projects/mammonous-furniture.netlify.app.webp";
 import songuessrIMG from "../assets/images/projects/songuessr.netlify.app.webp";
+import giardIMG from "../assets/images/projects/giarddesign.webp";
 
 export type IProject = {
   name: string;
@@ -9,6 +10,7 @@ export type IProject = {
   img: string;
   github: string;
   live: string;
+  technology: string;
 };
 
 export const projects: IProject[] = [
@@ -18,6 +20,7 @@ export const projects: IProject[] = [
     img: fpltoolsIMG,
     github: "https://github.com/FPLTomeczek/FPLTools-TS",
     live: "https://fpltools.onrender.com",
+    technology: "react",
   },
   {
     name: "Gymate Demo",
@@ -25,6 +28,7 @@ export const projects: IProject[] = [
     img: gymateIMG,
     github: "https://github.com/FPLTomeczek/gogym",
     live: "https://gymate-demo.netlify.app",
+    technology: "react",
   },
   {
     name: "Songuessr",
@@ -32,6 +36,7 @@ export const projects: IProject[] = [
     img: songuessrIMG,
     github: "https://github.com/FPLTomeczek/guess_the_song",
     live: "https://songuessr.netlify.app/login",
+    technology: "react",
   },
   {
     name: "Mammonous furniture",
@@ -39,5 +44,14 @@ export const projects: IProject[] = [
     img: mammonousIMG,
     github: "https://github.com/FPLTomeczek/store-furniture",
     live: "https://mammonous-furniture.netlify.app",
+    technology: "react",
+  },
+  {
+    name: "giarddesign",
+    desc: "Fake garden store. Website was created as a recruitment task for adRespect. Designed By adRespect, created by me.",
+    img: giardIMG,
+    github: "https://github.com/FPLTomeczek/adRespect-zadanie",
+    live: "https://effortless-sprite-975f82.netlify.app",
+    technology: "js",
   },
 ];

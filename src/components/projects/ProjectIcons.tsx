@@ -1,9 +1,11 @@
 const ProjectIcons = ({
   githubLink,
   liveLink,
+  technology,
 }: {
   githubLink: string;
   liveLink: string;
+  technology: string;
 }) => {
   return (
     <div className="flex gap-4 mt-4">
@@ -16,8 +18,16 @@ const ProjectIcons = ({
         <p className="text-xs text-grey-200">Demo</p>
       </a>
       <div className="flex flex-col items-center">
-        <i className="fa-brands fa-react bg-gradient-to-r from-secondary-color to-accent-color rounded-full p-2 text-black text-4xl transform transition duration-500 hover:scale-90"></i>
-        <p className="text-xs text-grey-200">React</p>
+        <i
+          className={`fa-brands fa-${technology} bg-gradient-to-r from-secondary-color to-accent-color rounded-full p-2 text-black text-4xl transform transition duration-500 hover:scale-90`}
+        ></i>
+        <p className="text-xs text-grey-200">
+          {technology === "react"
+            ? "React"
+            : technology === "js"
+            ? "JS"
+            : "unknown"}
+        </p>
       </div>
     </div>
   );

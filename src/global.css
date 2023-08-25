@@ -483,6 +483,10 @@ template {
   bottom: -2281px;
   transition: bottom 8s;
 }
+.giarddesign-img {
+  bottom: -3247px;
+  transition: bottom 12s;
+}
 
 .linear-gradient-skills {
   background: linear-gradient(
